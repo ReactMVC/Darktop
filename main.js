@@ -56,7 +56,7 @@ function loadWebContent() {
 
   // if offline theme
   // wc.once('did-finish-load', () => {
-  //   mainWindow.loadURL(__dirname, appConfig['websiteUrl'])
+  //   mainWindow.loadFile(path.join(__dirname, appConfig['websiteUrl']))
   // })
 
   // if not loading page redirect error page

@@ -1,0 +1,154 @@
+/* Fonts */
+@font-face {
+  font-family: Vazir;
+  src: url('fonts/Vazir.eot');
+  src: url('fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Vazir.woff') format('woff'),
+    url('fonts/Vazir.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('fonts/Vazir-Bold.eot');
+  src: url('fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Vazir-Bold.woff') format('woff'),
+    url('fonts/Vazir-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('fonts/Vazir-Light.eot');
+  src: url('fonts/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Vazir-Light.woff') format('woff'),
+    url('fonts/Vazir-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+/* Main */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Vazir' !important;
+}
+
+#container {
+  position: relative;
+  height: 100vh;
+}
+
+#container .content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.content {
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.content .offline {
+  position: relative;
+  height: 240px;
+}
+
+.content .offline h3 {
+  font-family: 'Vazir' !important;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2f2e41;
+  margin: 0px;
+  letter-spacing: 3px;
+  padding-left: 6px;
+}
+
+.content h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #2f2e41;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.btn_reload {
+  border: none;
+  background: #2f2e41;
+  color: #ffffff !important;
+  font-weight: 100;
+  padding: 10px;
+  border-radius: 3px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  width: 200px;
+  letter-spacing: 2px;
+}
+
+.btn_reload:hover {
+  color: #2f2e41 !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  letter-spacing: 4px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0s;
+}
+
+.offline-text {
+  font-size: 100px;
+  text-transform: uppercase;
+  color: #2f2e41
+}
+
+@media only screen and (max-width: 767px) {
+  .content .offline {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content .offline {
+    height: 162px;
+  }
+  .content .offline h1 {
+    font-size: 162px;
+    height: 150px;
+    line-height: 162px;
+  }
+  .content h2 {
+    font-size: 16px;
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #2f2e41;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}

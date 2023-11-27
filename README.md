@@ -4,21 +4,39 @@ Darktop
 <p align="center">
 Convert Website to Desktop application
 </p>
-<br>
-<h2>Installation</h2>
 
-You must install Node.js and clone the project:  
+## System requirements
+To get started, you must first install `nodejs` on your system. A package manager like `npm` is also required.
+- [nodejs](https://nodejs.org)
+- [npm](https://www.npmjs.com)
+- [git](https://git-scm.com)
 
-```
+
+## Installation
+
+To install and run this project, follow these steps:
+
+1. Clone the repository:
+
+```bash
 git clone https://github.com/ReactMVC/Darktop.git
 ```
 
-Then install the requirements by running:
+2. Navigate into the project directory:
+
+```bash
+cd Darktop
+```
+
+3. Install the dependencies:
+
 ```bash
 npm install
 ```
-And for running it, you can enter this command:
- ```bash
+
+4. Start app
+
+```bash
 npm start
 ```
 

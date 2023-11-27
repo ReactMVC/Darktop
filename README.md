@@ -94,6 +94,16 @@ There are two menu types
 - Main application menu – menu-config.js
 - Right menu – right-menu-config.js
 
+### Load offline theme (no site required)
+If you want to import your static template from your system path, first change the site address to your template path in the config.js file:
+```javascript
+'websiteUrl' : 'src/index.html',
+```
+Then go to the main.js file and make changes like the images below. (The first image is original and the second image is modified):
+
+![1](https://raw.githubusercontent.com/ReactMVC/image-storage/main/files/2023-11-27-h-46-7-w9mv6elibsl.png)
+![2](https://raw.githubusercontent.com/ReactMVC/image-storage/main/files/2023-11-27-h-46-13-m00vphvpwt.png)
+
 
 ### Hide website elements
 Give a native look to your application. You can hide your website elements as you prefer. To do this, open config.js file.

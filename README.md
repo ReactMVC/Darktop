@@ -91,12 +91,8 @@ All application Icons are located in the build folder. Replace images using the 
 
 ### Customize the main/right menu
 There are two menu types
-```bash
-Main application menu – menu-config.js
-```
-```bash
-Right menu – right-menu-config.js
-```
+- Main application menu – menu-config.js
+- Right menu – right-menu-config.js
 
 
 ### Hide website elements

@@ -49,12 +49,12 @@ function loadWebContent() {
   //suessfull loding page afer dom created
   wc.once('did-finish-load', () => {
     mainWindow.loadURL(appConfig['websiteUrl']);
-  })
+  });
 
   // if offline theme
   // wc.once('did-finish-load', () => {
   //   mainWindow.loadFile(path.join(__dirname, appConfig['websiteUrl']))
-  // })
+  // });
 
   // if not loading page redirect error page
   wc.on('did-fail-provisional-load', (error, code) => {

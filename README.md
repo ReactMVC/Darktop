@@ -11,6 +11,11 @@ To get started, you must first install `nodejs` on your system. A package manage
 - [npm](https://www.npmjs.com)
 - [git](https://git-scm.com)
 
+To output the rpm file you need to install its module in the system, otherwise delete its value. Below is the command to install rpm in Ubuntu:
+```bash
+sudo apt install rpm
+```
+
 
 ## Installation
 

@@ -1,0 +1,85 @@
+/* Fonts */
+@font-face {
+  font-family: Vazir;
+  src: url("fonts/Vazir.eot");
+  src: url("fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Vazir.woff") format("woff"),
+    url("fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("fonts/Vazir-Bold.eot");
+  src: url("fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Vazir-Bold.woff") format("woff"),
+    url("fonts/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("fonts/Vazir-Light.eot");
+  src: url("fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Vazir-Light.woff") format("woff"),
+    url("fonts/Vazir-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vazir";
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.content {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.offline-message {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.offline-image {
+  font-size: 100px;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0;
+}
+
+.try-again-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2f2e41;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.try-again-button:hover {
+  background-color: #1d1c2d;
+}

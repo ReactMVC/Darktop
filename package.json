@@ -4,16 +4,84 @@
   "description": "Convert Website to Desktop application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-l": "npx electron-builder -l",
+    "build-w": "npx electron-builder -w",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "author": "Hossein Pira",
+  "author": {
+    "name": "Hossein Pira",
+    "email": "h3dev.pira@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
-    "electron": "^16.0.6"
+    "electron": "^16.0.6",
+    "electron-builder": "^24.9.1",
+    "electron-builder-notarize": "^1.5.1"
   },
   "build": {
-    "mac": {
-      "category": "public.app-category.utilities"
+    "appId": "com.darktop.app",
+    "productName": "Darktop",
+    "artifactName": "tc-${version}-${arch}.${ext}",
+    "asar": true,
+    "copyright": "Copyright © 2023 Hossein Pira",
+    "generateUpdatesFilesForAllChannels": true,
+    "detectUpdateChannel": true,
+    "npmRebuild": true,
+    "buildDependenciesFromSource": false,
+    "afterSign": "electron-builder-notarize",
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "category": "Utility",
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "tar.gz",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "rpm",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "vendor": "Hossein Pira",
+      "synopsis": "Convert Website to Desktop application",
+      "artifactName": "tc-linux-${version}-${arch}.${ext}",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "artifactName": "tc-setup.${ext}",
+      "shortcutName": "TCI"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReactMVC/Darktop.git"
   }
 }

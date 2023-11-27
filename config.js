@@ -1,9 +1,6 @@
-// Darktop 1.0
-// Hossein Pira
-
 const config = {
     // Main Application URL
-    'websiteUrl' : 'https://github.com',
+    'websiteUrl' : 'https://firemeet.github.io',
 
     // Application Name
     'appName' : 'Darktop',
@@ -22,4 +19,4 @@ const config = {
 
 }
 
-module.exports = config
+module.exports = config;

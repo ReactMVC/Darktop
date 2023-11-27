@@ -98,14 +98,88 @@ Right menu – right-menu-config.js
 Give a native look to your application. You can hide your website elements as you prefer. To do this, open config.js file.
 Next, you can add your class or id value separated by comma.
 
-### Hide elements by ID
+#### Hide elements by ID
 ```javascript
 'hideElementsId' : ['id_1', 'id_2', 'id_3'],
 ```
 
-### Hide elements by Class
+#### Hide elements by Class
 ```javascript
 'hideElementsClass' : ['class_1', 'class_2', 'class_3'],
+```
+
+### Edit Application Website Info
+you need to change the repository attribute of the package.json file in the application root directory.
+```json
+"repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReactMVC/Darktop.git"
+}
+```
+
+### Build Info
+you need to change the build info of the package.json file in the application root directory.
+```json
+"build": {
+    "appId": "com.darktop.app",
+    "productName": "Darktop",
+    "artifactName": "tc-${version}-${arch}.${ext}",
+    "asar": true,
+    "copyright": "Copyright © 2023 Hossein Pira",
+    "generateUpdatesFilesForAllChannels": true,
+    "detectUpdateChannel": true,
+    "npmRebuild": true,
+    "buildDependenciesFromSource": false,
+    "afterSign": "electron-builder-notarize",
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "category": "Utility",
+      "target": [
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "tar.gz",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "rpm",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "vendor": "Hossein Pira",
+      "synopsis": "Convert Website to Desktop application",
+      "artifactName": "tc-linux-${version}-${arch}.${ext}",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "artifactName": "tc-setup.${ext}",
+      "shortcutName": "TCI"
+    }
+}
 ```
 
 ## Developer Contact

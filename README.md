@@ -128,7 +128,7 @@ you need to change the build info of the package.json file in the application ro
 "build": {
     "appId": "com.darktop.app",
     "productName": "Darktop",
-    "artifactName": "tc-${version}-${arch}.${ext}",
+    "artifactName": "darktop-${version}-${arch}.${ext}",
     "asar": true,
     "copyright": "Copyright © 2023 Hossein Pira",
     "generateUpdatesFilesForAllChannels": true,
@@ -173,7 +173,7 @@ you need to change the build info of the package.json file in the application ro
       ],
       "vendor": "Hossein Pira",
       "synopsis": "Convert Website to Desktop application",
-      "artifactName": "tc-linux-${version}-${arch}.${ext}",
+      "artifactName": "darktop-linux-${version}-${arch}.${ext}",
       "icon": "build/icon.png"
     },
     "nsis": {
@@ -181,7 +181,7 @@ you need to change the build info of the package.json file in the application ro
       "perMachine": true,
       "installerIcon": "build/icon.ico",
       "uninstallerIcon": "build/icon.ico",
-      "artifactName": "tc-setup.${ext}",
+      "artifactName": "darktop-setup.${ext}",
       "shortcutName": "TCI"
     }
 }
